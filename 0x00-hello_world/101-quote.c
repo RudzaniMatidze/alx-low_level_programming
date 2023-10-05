@@ -6,6 +6,12 @@
  */
 int main(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 61);
-	return (1);
+	 ssize_t len;
+    char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+
+    len = 59;
+    if (write(STDERR_FILENO, message, len) != len)
+        return (1);
+
+    return (1);
 }
