@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 /**
  * main - A program that prints a line to standard error
@@ -6,6 +5,7 @@
  */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19,\n", stdout);
+	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19,\n";
+	    write(STDERR_FILENO, message, 59);
 	return (1);
 }
