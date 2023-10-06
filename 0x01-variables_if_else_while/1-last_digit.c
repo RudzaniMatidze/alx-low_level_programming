@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* more headers goes there */
 /**
- * main - Entry point
+ * main - main function
  *
  * Return: Always 0
  */
@@ -21,7 +21,7 @@ int main(void)
 				if (m > 5)
 					printf("Last digit of %d is %d and greater than 5", n, m);
 				else if (m == 0)
-					printf("Last digit of %d is %d and is zero", n, m);
+					printf("Last digit of %d is %d and is 0", n, m);
 				else if (m < 6 && m != 0)
 					printf("Last digit of %d is %d and is less then 6 and not 0", n, m);
 				printf("\n");
