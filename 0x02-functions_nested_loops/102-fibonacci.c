@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int inc;
+	int inc
+		;
 	unsigned long k1 = 0, k2 = 1, k3;
 	for (inc = 0; inc < 50; inc++)
 	{
