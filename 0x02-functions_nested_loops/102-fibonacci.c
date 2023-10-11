@@ -7,8 +7,8 @@
 int main(void)
 {
 	int inc;
-
 	unsigned long k1 = 0, k2 = 1, k3;
+
 	for (inc = 0; inc < 50; inc++)
 	{
 		k3 = k1 + k2;
