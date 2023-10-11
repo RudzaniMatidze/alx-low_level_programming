@@ -39,4 +39,8 @@ void print_times_table(int n)
 		}
 	}
 }
-
+int main(void)
+{
+	Print_times_table(2);
+	return (0);
+}
