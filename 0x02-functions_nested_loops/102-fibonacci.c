@@ -11,7 +11,7 @@ int main(void)
 	for (inc = 0; inc < 50; inc++)
 	{
 		k3 = k1 + k2;
-		printf("lu", k3);
+		printf("%lu", k3);
 		k1 = k2;
 		k2 = k3;
 		if (inc == 49)
