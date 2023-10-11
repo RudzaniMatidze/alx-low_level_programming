@@ -1,44 +1,44 @@
 #include <stdio.h>
 /**
- *main - prints out first 98
- *fibonacci suit numbers
+ *main - Prints the first 98 Fibonacci numbers,
+ starting wit 1 and 2
  *Return: return 0
  */
 int main(void)
 {
 	int inc;
-	unsigned long k1 = 0, k2 = 1, k3;
-	unsigned long k1_m1, k1_m2, k2_m1, k2_m2;
-	unsigned long m1, m2;
+	unsigned long n1 = 0, n2 = 1, n3;
+	unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+	unsigned long h1, h2;
 
 	for (inc = 0; inc < 92; inc++)
 	{
-		k3 = k1 + k2;
-		printf("%lu, ", k3);
-		k1 = k2;
-		k2 = k3;
+		n3 = n1 + n2;
+		printf("%lu, ", n3);
+		n1 = n2;
+		n2 = n3;
 	}
-	k1_h1 = k1 / 10000000000;
-	k2_h1 = k2 / 10000000000;
-	k1_h2 = k1 % 10000000000;
-	k2_h2 = k2 % 10000000000;
+	n1_h1 = n1 / 10000000000;
+	n2_h1 = n2 / 10000000000;
+	n1_h2 = n1 % 10000000000;
+	n2_h2 = n2 % 10000000000;
 	for (inc = 93; inc < 99; inc++)
 	{
-		h1 = k1_m1 + k2_m1;
-		h2 = k1_m2 + k2_m2;
-		if ((k1_m2 + k2_m2) > 9999999999)
+		h1 = n1_h1 + n2_h1;
+		h2 = n1_h2 + n2_h2;
+		if ((n1_h2 + n2_h2) > 9999999999)
 		{
-			m1 += 1;
-			m2 %= 10000000000;
+			h1 += 1;
+			h2 %= 10000000000;
 		}
-		printf("%lu%lu", m1, m2);
+		printf("%lu%lu", h1, h2);
 		if (inc != 98)
 			printf(", ");
 
-		k1_m1 = k2_m1;
-		k1_m2 = k2_m2;
-		k2_m1 = m1;
-		k2_m2 = m2;
+		n1_h1 = n2_h1;
+		n1_h2 = n2_h2;
+		n2_h1 = h1;
+		n2_h2 = h2;
 	}
 	printf("\n");
 	return (0);
