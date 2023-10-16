@@ -1,28 +1,24 @@
 #include <stdio.h>
-#include <stdib.h>
+#include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
 /**
- * generateRandomCharacter - generates random password for program 101-crackme
- * Return: random password
+ * main - generates random password for 101-crackme
+ * Return: 0 (success)
  */
-char generateRandomCharacter(void)
-{
-	return (char)('!' + rand() % (126 - '!'));
-}
 int main(void)
 {
-	int i;
+	int sum;
+	char m;
 
 	srand(time(NULL));
-	char password[PASSWORD_LENGTH + 1];
-
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	sum = 0;
+	while (sum <= 2645)
 	{
-		password[i] = generateRandomCharacter();
+		m = rand() % 128;
+		sum += m;
+		putchar(m);
 	}
-	password[PASSWORD_LENGTH] = '0';
-	printf("Generated Password: %s\n", password);
+	putchar(2772 - sum);
 	return (0);
 }
