@@ -19,7 +19,7 @@ char *cap_string(char *n)
 		{
 			n[0] = n[0] - 32;
 		}
-		if (n[count] == ' ' || n[count] == '\t' || s[count] == '\n'
+		if (n[count] == ' ' || n[count] == '\t' || n[count] == '\n'
 				|| n[count] == ',' || n[count] == ';' || n[count] == '.'
 				|| n[count] == '.' || n[count] == '!' || n[count] == '?'
 				|| n[count] == '"' || n[count] == '(' || n[count] == ')'
