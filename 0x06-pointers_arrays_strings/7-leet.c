@@ -1,25 +1,36 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * leet - Encode into 1337speak.
- * @n: analized string.
- * Return: string with changed vowels
+ * leet - encodes a string into 1337.
+ * letters a and A are replaced by 4.
+ * Letters e and E are replaced by 3
+ * Letters o and O are replaced by 0
+ * Letters t and T are replaced by 7
+ * Letters l and L are replaced by 1
+ * @n: pointer to string.
+ *
+ * Return: pointer to n.
  */
 char *leet(char *n)
 {
-	int c, d;
-	char s1[] = "aAeEoOtTlL";
-	char s2[] = "4433007711";
+	int stringCount, leetCount;
+	char leetLetters[] = "aAeEoOtTlL";
+	char leetNums[] = "4433007711";
 
-	for (c = 0; n[1] != '\0'; c++)
+	/*  scan through string */
+	stringCount = 0;
+	while (n[stringCount] != '\0')
+		/* check whether leetLetter is found */
 	{
-		for (d = 0; d < 10; d++)
+		leetCount = 0;
+		while (leetCount < 10)
 		{
-			if (n[1] == s1[d])
+			if (leetLetters[leetCount] == n[stringCount])
 			{
-				n[1] = s2[d];
+				n[stringCount] = leetNums[leetCount];
 			}
+			leetCount++;
 		}
+		stringCount++;
 	}
 	return (n);
 }
