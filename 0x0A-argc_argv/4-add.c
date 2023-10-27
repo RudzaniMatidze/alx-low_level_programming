@@ -1,30 +1,45 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+#include "main.h"
 
 /**
- * main - program that adds positive numbers..
+ * main -  program that adds positive numbers.
  * @argc: argument count
  * @argv: argument vector
- * Return: Always 0
+ * Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
  */
+
 int main(int argc, char *argv[])
 {
-	int m, n, add = 0;
+	int p, q, length, sum;
+	char *ptr;
 
-	for (m = 1; m < argc; m++)
+	if (argc < 2)
+	printf("0\n");
+	else
 	{
-		for (m = 0; argv[m][n] != '\0'; n++)
+		sum = 0;
+		for (p = 1; p < argc; p++)
 		{
-			if (isdigit(argv[m][n]))
+			ptr = argv[p];
+			length = strlen(ptr);
+
+			for (q = 0; q < length; q++)
 			{
-				printf("Error\n");
-				return (1);
+				if (isdigit(*(ptr + q)) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			sum += atoi(argv[p]);
 		}
-		add += atoi(argv[m]);
+
+		printf("%d\n", sum);
 	}
-	printf("%d\n", add);
 	return (0);
 }
+
