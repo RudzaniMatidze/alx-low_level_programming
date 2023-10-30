@@ -7,7 +7,7 @@
  * @s2: second string
  * Return: Always 0
  */
- char *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *concat;
 	int s1_len = 0, s2_len = 0;
