@@ -7,7 +7,6 @@
  * @ptr: pointer to memory
  * @old_size: old size of byte
  * @new_size: new size of byte
- * @min: minimum value
  * Return: ptr
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
