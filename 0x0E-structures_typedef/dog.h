@@ -5,7 +5,7 @@
  * @name: name of the dog
  * @age: age of the dog
  * #owner: name of dog owner
- * Desc: first struct wit alx
+ * Description: first struct
  */
 struct dog
 {
