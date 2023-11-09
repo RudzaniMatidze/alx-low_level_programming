@@ -6,12 +6,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, check_stat;
+	int i, check_stat; /* declare variable and va_arg datatype */
 
 	char *str;
 	va_list spc;
 
-	va_start(spc, format);
+	va_start(spc, format); /*initialize var_arg */
 
 	i = 0;
 	while (format != NULL && format[i] != '\0')
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 				check_stat = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && check_stat == 0)
+		if (format[i + 1] != '\0' && check_stat == 0) /* if is not NULL*/
 			printf(", ");
 		i++;
 	}
