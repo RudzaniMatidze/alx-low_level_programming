@@ -6,23 +6,28 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t node = 0;
-	long int tempo;
+	const listint_t *tempo = head;
+	const listint_t *arr[1024];
+	size_t lng = 0, a;
 
-	while (head)
+	if (!head)
 	{
-		tempo = head - head->next;
-		node++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (tempo > 0)
-			head = head->next;
-
-		else
-		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
-		}
+		printf("0\n");
+		exit(98);
 	}
+	while (tempo)
+	{
+		for (a = 0; a < lng; a++)
+			if (arr[a] == tempo)
+			{
+				printf("-> [%p] %d\n", (void *)tempo, tempo->n);
+				return (lng);
+			}
+		arr[lng] = tempo;
+		lng++;
 
-	return (node);
+		printf("[%p] %d\n", (void *)tempo, tempo->n);
+		tempo = tempo->next;
+	}
+	return (lng);
 }
