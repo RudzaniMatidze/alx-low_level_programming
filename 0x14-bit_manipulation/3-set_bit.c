@@ -7,11 +7,12 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int maximum = 0x01;
+	unsigned int k;
 
-	maximum <<= index;
-	if (maximum == 0)
+	if (index > 63)
 		return (-1);
-	*n |= maximum;
+	k = 1 << index;
+	*n = (*n | k);
+
 	return (1);
 }
