@@ -6,6 +6,16 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+void print_pntr(char *pntr);
+void print_typess(char *pntr);
+void print_os_abi(char *pntr);
+void print_vrsion(char *pntr);
+void print_dt(char *pntr);
+int chck_elf(char *pntr);
+void print_mgic(char *pntr);
+void chck_systm(char *pntr);
+int main(int arc, char *arv[]);
+
 /**
  * print_pntr - prints the address
  * @magc: magic number
