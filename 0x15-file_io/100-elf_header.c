@@ -244,7 +244,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 
 /**
  * close_elf - close an ELF file
- * @el: description of ELF file
+ * @elf: description of ELF file
  *
  * Description: if file is unable to close then exit with status code 98
  */
