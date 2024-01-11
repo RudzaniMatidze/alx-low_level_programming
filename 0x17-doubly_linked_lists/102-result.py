@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-palindrome = 0
+largest_palindrome = 0
 
 for a in range(100, 1000):
     for b in range(100, 1000):
