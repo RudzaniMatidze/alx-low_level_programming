@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -p .. https://raw.githubusercontent.com/RudzaniMatidze/alx-low_level_programming/master/0x18-dynamic_libraries/libhacker.so
-export LD_PRELOAD="$PWD/../libhacker.so"
+gcc -shared -o myprintf.so -fpic hacker.c
+export LD_PRELOAD=./myprintf.so:$LD_LIBRARY_PATH
