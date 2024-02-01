@@ -25,4 +25,4 @@
 | `4. >>> ht['betty']`             | `char *hash_table_get(const hash_table_t *ht, const char *key);` |
 | `5. >>> print(ht)`           | `void hash_table_print(const hash_table_t *ht);`               |
 | `6. >>> del ht`                  | `void hash_table_delete(hash_table_t *ht);`                |
-| `7. $ht['Betty'] = 'Cool'`  | `shash_table_t *shash_table_create(unsigned long int size);`    |
+| `7. $ht['Betty'] = 'Cool'`  | <ul><li>`shash_table_t *shash_table_create(unsigned long int size);`</li><li>`int shash_table_set(shash_table_t *ht, const char *key, const char *value);`</li><li>`char *shash_table_get(const shash_table_t *ht, const char *key);`</li><li>`void shash_table_print(const shash_table_t *ht);`</li><li>`void shash_table_print_rev(const shash_table_t *ht);`</li><li>`void shash_table_delete(shash_table_t *ht);`</li></ul>    |
