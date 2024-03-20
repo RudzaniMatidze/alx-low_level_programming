@@ -7,4 +7,6 @@
 
 | File | Requirements |
 | ---- | ------------ |
-| [./0-Makefile] | Create your first Makefile.<ul><li>name of the executable: school</li><li>The all rule builds your executable,</li><li>variables: none</li></ul> |
+| [0-Makefile](./0-Makefile) | Create your first Makefile.<ul><li>name of the executable: school</li><li>rules: all (The all rule builds your executable),</li><li>variables: none</li></ul> |
+| [1-Makefile](./1-Makefile) | <ul><li>name of the executable: school</li><li>rules: all (The all rule builds your executable)</li><li>variables: none</li></ul> |
+| [2-Makefile](./2-Makefile) | Create your first useful Makefile.<ul><li>name of the executable: school</li><li>
